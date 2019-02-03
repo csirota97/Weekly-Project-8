@@ -201,6 +201,7 @@ public class Main extends Application implements Serializable {
 	
 	public static void main(String[] args) {
 		ListController.name="default";
+		Process p = Runtime.getRuntime().exec("pip install smtplib");
 		launch(args);
 	}
 	
