@@ -48,7 +48,7 @@
                      </GridPane.margin>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#list" text="List" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#cancel" text="Cancel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button mnemonicParsing="false" onAction="#send" text="Send" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button mnemonicParsing="false" onAction="#open" text="Open" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button mnemonicParsing="false" onAction="#setup" text="Setup Sender" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />

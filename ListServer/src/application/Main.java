@@ -100,7 +100,8 @@ public class Main extends Application implements Serializable {
 	}
 	@FXML
 	public void cancel(ActionEvent e) {
-		
+        Platform.exit();
+        System.exit(0);
 	}
 
 	@FXML
