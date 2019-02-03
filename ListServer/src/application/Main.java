@@ -126,7 +126,6 @@ public class Main extends Application implements Serializable {
 						"PASSWORD = '" + pass + "'";
 				user = "";
 				pass = "";
-				System.out.println(fileString);
 				String storeDir = "src"+File.separator+"py"+File.separator+"config.py";
 				FileWriter fw = new FileWriter(storeDir);
 				BufferedWriter bw = new BufferedWriter(fw);
@@ -177,8 +176,13 @@ public class Main extends Application implements Serializable {
 		}
 		addresses = addresses + ']';
 		
-		subject = subject + '"' + ((TextField) scene.lookup("#subject")).getText() + '"';
-		message = message + '"' + ((TextArea) scene.lookup("#body")).getText() + '"';
+		String field = ((TextField) scene.lookup("#subject")).getText();
+		field = field.replaceAll("\"", "\" + '\"' + \"");
+		subject = subject + '"' + field + '"';
+
+		field = ((TextArea) scene.lookup("#body")).getText();
+		field = field.replaceAll("\"", "\" + '\"' + \"");
+		message = message + '"' + field + '"';
 		
 		String fileString = addresses + '\n' + subject + '\n' + message;
 		System.out.println(fileString);
